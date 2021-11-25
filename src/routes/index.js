@@ -1,8 +1,9 @@
-const express = require('express');
-const http = require('http');
-const router = express.Router();
+const authRoutes = require('./auth.route');
+const defaultRoutes = [
+    {
+        path: "/auth",
+        route: authRoutes
+    }
+]
 
-router.get ('/', (req, res, next)=>
-res.send('<h1>Hello World</h1>'));
-
-module.exports=router;
+module.exports = defaultRoutes;

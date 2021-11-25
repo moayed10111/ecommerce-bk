@@ -1,9 +1,9 @@
 const express = require('express');
-
+const routes = require('./utils/route-handler');
 const app = express();
 
-const index = require('./routes/index');
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json());
+app.use(routes);
 
-app.use(index);
-
-module.exports= app;
+module.exports = app;
