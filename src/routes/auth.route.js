@@ -33,7 +33,7 @@ router.post('/otp', (req, res, next) => {
     }
 });
 
-router.post('/resetPassword', (req, res, next)=>{
+router.post('/reset-password', (req, res, next)=>{
     try {
         const password = generator.generate({
             length:10,
